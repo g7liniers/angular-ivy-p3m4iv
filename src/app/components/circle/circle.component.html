@@ -1,0 +1,13 @@
+<div
+  class="container"
+  [style.width]="getCircleDiameterPX()"
+  [style.height]="getCircleDiameterPX()"
+>
+  <div
+    class="item-container"
+    *ngFor="let label of labels; let i = index"
+    [ngStyle]="{ transform: 'translate(' + translateElementPX(i) + ')' }"
+    [style.width]="getItemDiameterPX()"
+    [style.height]="getItemDiameterPX()"
+  ></div>
+</div>

@@ -1,0 +1,30 @@
+$item-count: 8;
+$circle-size: 200px;
+$item-size: 20px;
+
+.container {
+  // width: $circle-size;
+  // height: $circle-size;
+
+  border: solid;
+  border-radius: 50%;
+  position: relative;
+
+  .item-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    // left: 50%;
+    // transform: translate(100px, 200px);
+    background-color: blue;
+  }
+
+  :hover {
+    // transition: all 1s;
+    background-color: black;
+    // border: solid red;
+  }
+}
