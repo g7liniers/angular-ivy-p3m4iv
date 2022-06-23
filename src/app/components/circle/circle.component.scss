@@ -10,21 +10,27 @@ $item-size: 20px;
   border-radius: 50%;
   position: relative;
 
-  .item-container {
+  .outer-item-container {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
     border-radius: 50%;
-    // left: 50%;
-    // transform: translate(100px, 200px);
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .item-container {
+      border-radius: 50%;
+      // left: 50%;
+      // transform: translate(100px, 200px);
+      background-color: blue;
+    }
   }
-
-  :hover {
-    // transition: all 1s;
+  :hover > .item-container {
+    transition: all 1s;
     background-color: black;
-    // border: solid red;
+    transform: scale(3);
   }
 }

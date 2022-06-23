@@ -36,10 +36,8 @@ export class CircleComponent implements OnInit {
   ngOnInit() {}
 
   translateElementPX(n: number): string {
-    let xPos =
-      this.circleRadius * Math.cos(n * this.angleDiff) - this.itemRadius;
-    let yPos =
-      this.circleRadius * Math.sin(n * this.angleDiff) - this.itemRadius;
+    let xPos = this.circleRadius * Math.cos(n * this.angleDiff) - 75;
+    let yPos = this.circleRadius * Math.sin(n * this.angleDiff) - 75;
 
     return `${xPos}px, ${yPos}px`;
   }
