@@ -28,6 +28,8 @@ export class CircleComponent implements OnInit {
   circleRadius: number = 350;
   itemRadius: number = 20;
   angleDiff: number;
+  selectedLabelIndex: number = null;
+
   constructor() {
     this.nElements = this.labels.length;
     this.angleDiff = (2 * Math.PI) / this.nElements;
@@ -37,7 +39,7 @@ export class CircleComponent implements OnInit {
 
   translateElementPX(n: number): string {
     let xPos = this.circleRadius * Math.cos(n * this.angleDiff) - 75;
-    let yPos = this.circleRadius * Math.sin(n * this.angleDiff) - 75;
+    let yPos = -this.circleRadius * Math.sin(n * this.angleDiff) - 75;
 
     return `${xPos}px, ${yPos}px`;
   }
@@ -47,5 +49,15 @@ export class CircleComponent implements OnInit {
   }
   getItemDiameterPX(): string {
     return 2 * this.itemRadius + 'px';
+  }
+
+  changeSelectedLabel(n: number) {
+    this.selectedLabelIndex = n;
+  }
+
+  boxContent(n: number): string {
+    if (n !== null) {
+      return this.translateElementPX(n);
+    }
   }
 }

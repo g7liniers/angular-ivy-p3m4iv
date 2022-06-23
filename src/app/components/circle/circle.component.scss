@@ -9,6 +9,9 @@ $item-size: 20px;
   border: solid;
   border-radius: 50%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .outer-item-container {
     position: absolute;
@@ -16,21 +19,38 @@ $item-size: 20px;
     top: 50%;
     width: 150px;
     height: 150px;
-    background-color: yellow;
+    // background-color: rgb(158, 255, 215);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     .item-container {
       border-radius: 50%;
-      // left: 50%;
-      // transform: translate(100px, 200px);
-      background-color: blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffc300;
+      color: #000814;
     }
   }
   :hover > .item-container {
-    transition: all 1s;
-    background-color: black;
+    transition: all 0.5s;
+    background-color: #ffd60a;
     transform: scale(3);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(255, 195, 0, 0.54);
+    box-shadow: 0px 0px 30px 10px rgba(255, 195, 0, 0.54);
+  }
+
+  :hover {
+    transition: all 0.5s;
+  }
+
+  .center-box {
+    background-color: #003566;
+    color: #ffd60a;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
   }
 }

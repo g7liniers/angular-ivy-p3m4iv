@@ -7,11 +7,18 @@
     class="outer-item-container"
     [ngStyle]="{ transform: 'translate(' + translateElementPX(i) + ')' }"
     *ngFor="let label of labels; let i = index"
+    (mouseover)="changeSelectedLabel(i)"
   >
     <div
       class="item-container"
       [style.width]="getItemDiameterPX()"
       [style.height]="getItemDiameterPX()"
-    ></div>
+    >
+      {{ i }}
+    </div>
+  </div>
+
+  <div class="center-box">
+    {{ boxContent(selectedLabelIndex) }}
   </div>
 </div>
