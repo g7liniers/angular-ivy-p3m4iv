@@ -52,5 +52,10 @@ $item-size: 20px;
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    transition: all 0.25s;
+    box-shadow: 0px 0px 30px 10px rgba(0, 29, 61, 1);
+  }
+  .center-box:hover {
+    box-shadow: 0px 0px 30px 10px rgba(0, 53, 102, 1);
   }
 }
