@@ -6,12 +6,21 @@ $item-size: 20px;
   // width: $circle-size;
   // height: $circle-size;
 
-  border: solid;
+  // border: solid;
   border-radius: 50%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .connection {
+    position: absolute;
+    background-color: rgba(224, 233, 183, 255);
+    width: 350px;
+    height: 3px;
+    z-index: 1;
+    box-shadow: 0px 0px 20px 5px rgba(224, 233, 183, 255);
+  }
 
   .outer-item-container {
     position: absolute;
@@ -24,21 +33,23 @@ $item-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
     .item-container {
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #ffc300;
+      background-color: rgb(175, 199, 197);
+      box-shadow: 0px 0px 10px 2px rgb(8, 17, 62);
       color: #000814;
     }
   }
   :hover > .item-container {
     transition: all 0.5s;
-    background-color: #ffd60a;
+    background-color: rgba(224, 233, 183, 255);
     transform: scale(3);
-    -webkit-box-shadow: 0px 0px 30px 10px rgba(255, 195, 0, 0.54);
-    box-shadow: 0px 0px 30px 10px rgba(255, 195, 0, 0.54);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(224, 233, 183, 255);
+    box-shadow: 0px 0px 30px 10px rgba(224, 233, 183, 255);
   }
 
   :hover {
@@ -46,16 +57,17 @@ $item-size: 20px;
   }
 
   .center-box {
-    background-color: #003566;
-    color: #ffd60a;
+    background-color: #e5e1da;
+    color: rgb(9, 14, 27);
     padding: 20px;
     width: 200px;
     height: 200px;
     border-radius: 20px;
     transition: all 0.25s;
-    box-shadow: 0px 0px 30px 10px rgba(0, 29, 61, 1);
+    box-shadow: 0px 0px 30px 10px #5a404b;
+    z-index: 2;
   }
   .center-box:hover {
-    box-shadow: 0px 0px 30px 10px rgba(0, 53, 102, 1);
+    box-shadow: 0px 0px 30px 10px rgb(199, 104, 82);
   }
 }

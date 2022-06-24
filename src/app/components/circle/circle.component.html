@@ -21,4 +21,14 @@
   <div class="center-box">
     {{ boxContent(selectedLabelIndex) }}
   </div>
+
+  <div
+    class="connection"
+    [ngStyle]="{
+      transform:
+        'rotate(' +
+        (-360 / nElements) * selectedLabelIndex +
+        'deg) translate(175px) '
+    }"
+  ></div>
 </div>

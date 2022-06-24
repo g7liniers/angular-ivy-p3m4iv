@@ -28,7 +28,7 @@ export class CircleComponent implements OnInit {
   circleRadius: number = 350;
   itemRadius: number = 20;
   angleDiff: number;
-  selectedLabelIndex: number = null;
+  selectedLabelIndex: number = 0;
 
   constructor() {
     this.nElements = this.labels.length;
