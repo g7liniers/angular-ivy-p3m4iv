@@ -8,8 +8,8 @@
   background: rgb(0, 8, 20);
   background: radial-gradient(
     circle,
-    #312429 10%,
-    rgb(39, 52, 59) 40%,
-    rgb(9, 14, 27) 80%
+    rgba(152, 168, 167, 1) 10%,
+    rgba(54, 78, 124, 1) 50%,
+    rgba(34, 44, 81, 1) 80%
   );
 }
